@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block 'contenido' %}
+    <form action="#" method="post">
+
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <input type="submit" value="{{submit}}" class="btn btn-warning">
+        <a href="{% url 'proveedores' %}" >Volver al listado</a>
+    </form>
+
+{% endblock %}
